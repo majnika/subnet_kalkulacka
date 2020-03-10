@@ -2,6 +2,8 @@
 while True:
     try:
         ipLOMENOprefix = input("IP(A.B.C.D)/prefix(8-30): ")
+        if ipLOMENOprefix[-1:] == 'ň':
+            ipLOMENOprefix = ipLOMENOprefix[:-1]
         ip = (ipLOMENOprefix.split("/"))[0]
         prefix = int((ipLOMENOprefix.split("/"))[1])
         ip = [int(i) for i in ip.split(".")]
